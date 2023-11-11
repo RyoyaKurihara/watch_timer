@@ -9,8 +9,8 @@ class CountTimerPage extends StatefulWidget {
 }
 
 class CountTimerPageState extends State<CountTimerPage>{
-  int focusTime = 10;
-  int breakTime = 10;
+  int focusTime = 25 * 60;
+  int breakTime = 5 * 60;
 
   int focusTimeCount = 0;
   int breakTimeCount = 0;
@@ -24,6 +24,7 @@ class CountTimerPageState extends State<CountTimerPage>{
     // setState(() {});
   }
 
+  @override
   void initState(){
     super.initState();
     Timer.periodic(const Duration(seconds: 1), (Timer timer) {
